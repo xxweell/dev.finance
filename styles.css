@@ -78,7 +78,7 @@ header h1 {
 /* TABLE ================ */
 #data-table {
     width: 100%;
-    border-spacing: 0 0.5rem; /* mexe na borda da tabela. Nesse caso, aplica 0 par ao eixo vertical de 0.5rem para o eixo horizontal*/
+    border-spacing: 0 0.5rem; /* mexe na borda da tabela. Nesse caso, aplica 0 para o eixo vertical e 0.5rem para o eixo horizontal*/
     color: #969cb3;
 }
 
