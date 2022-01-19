@@ -13,6 +13,19 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* Propriedades CSS pra esconder os títulos da tela sem apagá-los, fazendo com que possam ser lidos por leitores de tela */
+.sr-only {
+    position: absolute; /* relativo ao seu pai */
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .container {
     width: min(90vh, 800px); /* Essa função procura o menor valor entre os dois argumentos e mantém ele */
     margin: auto;
@@ -61,6 +74,10 @@ header h1 {
 .card h3 {
     font-weight: normal;
     font-size: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card p {
