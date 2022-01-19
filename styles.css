@@ -8,6 +8,10 @@
     box-sizing: border-box; /* para os cálculos da caixa serem feitos a partir da borda*/
 }
 
+html {
+    font-size: 93.75%; /* 15px */
+}
+
 body {
     background: #f0f2f5;
     font-family: "Poppins", sans-serif;
@@ -39,6 +43,22 @@ h2 {
 
     font-weight: normal;
 }
+
+/* LINKS & BUTTONS ================ */
+a {
+    color: #49aa26;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+}
+
 /* HEADER ================ */
 header {
     background: #2d4a22;
@@ -94,14 +114,22 @@ header h1 {
 
 /* TABLE ================ */
 #data-table {
+    /* display: block; */
     width: 100%;
     border-spacing: 0 0.5rem; /* mexe na borda da tabela. Nesse caso, aplica 0 para o eixo vertical e 0.5rem para o eixo horizontal*/
     color: #969cb3;
+
+    overflow-x: auto;
 }
 
 table thead tr th:first-child,
 table tbody tr td:first-child{
     border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
 }
 
 table thead th {
@@ -147,4 +175,17 @@ footer {
 
     color: var(--dark-blue);
     opacity: .6;
+}
+
+/* RESPONSIVE ================ */
+@media (min-width: 800px) { /* a partir de largura 800px, aplica as propriedades abaixo */
+    html {
+        font-size: 87.5%; /* 14px */
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 }
